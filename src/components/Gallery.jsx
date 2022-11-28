@@ -1,12 +1,17 @@
 import Image from "./Image";
 
-function Gallery() {
-    const url = "https://images.dog.ceo/breeds/shiba/shiba-8.jpg";
+
+function Gallery(props) {
+    const { urls } = props;
     return (
         <div className="columns is-vcentered is-multiline">
-            <div className="column is-3">
-                <Image src={url} />
-            </div>
+            {urls.map((url) => {
+                return (
+                    <div key={url} className="column is-3">
+                        <Image src={url} />
+                    </div>
+                );
+            })}
         </div>
     );
 }
