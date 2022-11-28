@@ -12,6 +12,7 @@
   "author": "SHIRASHOJI Takuma",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
