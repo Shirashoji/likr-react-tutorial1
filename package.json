@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp -r dist docs && rm -rf dist",
+    "build": "vite build && cp -r dist docs",
     "preview": "vite preview"
   },
   "keywords": [],
