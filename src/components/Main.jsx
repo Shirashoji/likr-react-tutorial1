@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchImages } from "./api";
+import { fetchBreeds } from "./breeds";
 import Gallery from "./Gallery";
 import Form from "./Form";
 
@@ -22,15 +23,17 @@ import Form from "./Form";
 function Main() {
     const [urls, setUrls] = useState(null);
     useEffect(() => {
-        fetchImages("shiba").then((urls) => {
+        fetchImages("affenpinscher").then((urls) => {
             setUrls(urls);
         });
     }, []);
+
     function reloadImages(breed) {
         fetchImages(breed).then((urls) => {
             setUrls(urls);
         });
     }
+
     return (
         <main>
             <section className="section">

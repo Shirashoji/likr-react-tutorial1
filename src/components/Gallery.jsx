@@ -2,6 +2,7 @@ import Image from "./Image";
 import Loading from "./Loading";
 
 function Gallery(props) {
+
     const { urls } = props;
     if (urls == null) {
         return <Loading />;
